@@ -13,6 +13,7 @@ metadata:
 Jika halaman tertutup atau tidak langsung dapat diakses pengguna dapat melihat email masuk dari AMDALNET. Pengguna juga harus berhati-hati karena email yang dikirim mungkin masuk ke folder SPAM pada inbox email.
 
 <Callout icon="far fa-seal-exclamation" theme="error">
+
   ### Cek Spam Inbox
 
   Email mungkin dapat masuk ke spam inbox email pengguna. Hal ini diluar kendali AMDALNET sehingga pengguna harus melihat folder SPAM untuk berjaga-jaga.

@@ -26,7 +26,6 @@
 .VPNavBarMenuLink { border-bottom: 2px solid transparent; }
 .VPNavBarMenuLink.active { border-bottom-color: var(--vp-c-brand-1); color: var(--vp-c-text-1); }
 
-/* Sidebar: putih dengan garis kanan, tidak ada latar abu */
 @media (min-width: 960px) {
   .VPSidebar { border-right: 1px solid var(--vp-c-divider); }
 }
@@ -54,3 +53,19 @@
 .rm-excerpt { margin-top: 16px; font-size: 18px; color: var(--vp-c-text-2); }
 
 .vp-doc > div > h2:first-child { border-top: 0; margin-top: 24px; }
+
+.vp-doc .custom-block { border: 1px solid transparent; border-left-width: 4px; border-radius: 8px; padding: 14px 18px 6px; }
+.vp-doc .custom-block.info { border-color: var(--vp-c-indigo-2); }
+.vp-doc .custom-block.tip { border-color: var(--vp-c-brand-1); }
+.vp-doc .custom-block.warning { border-color: var(--vp-c-warning-2); }
+.vp-doc .custom-block.danger { border-color: var(--vp-c-danger-2); }
+.vp-doc .custom-block > h3:first-child {
+  display: flex; align-items: center; gap: 8px; margin: 0 0 4px; padding: 0;
+  font-size: 15px; letter-spacing: 0.02em; color: inherit;
+}
+.vp-doc .custom-block > h3:first-child .header-anchor { display: none; }
+.vp-doc .custom-block > h3:first-child::before { font-size: 18px; line-height: 1; }
+.vp-doc .custom-block.info > h3:first-child::before { content: 'ℹ️'; }
+.vp-doc .custom-block.tip > h3:first-child::before { content: '✅'; }
+.vp-doc .custom-block.warning > h3:first-child::before { content: '⚠️'; }
+.vp-doc .custom-block.danger > h3:first-child::before { content: '⛔'; }

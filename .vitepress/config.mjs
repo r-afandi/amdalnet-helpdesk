@@ -42,10 +42,9 @@ export default defineConfig({
   },
   themeConfig: {
     logo: '/logo.png',
-    nav: [{ text: 'Guides', link: '/', activeMatch: '^/(docs/)?' }],
-    sidebar: [{ text: brand, items: sections }],
+    sidebar: [{ text: brand, items: [{ text: 'Pendahuluan', link: '/' }, ...sections] }],
     search: { provider: 'local' },
-    outline: { label: 'Di halaman ini' },
+    outline: { label: 'Di halaman ini', level: 'deep' },
     lastUpdated: { text: 'Diperbarui' },
     docFooter: { prev: 'Sebelumnya', next: 'Berikutnya' },
   },
