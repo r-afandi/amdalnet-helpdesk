@@ -1,0 +1,4 @@
+.rm-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin: 16px 0; }
+.rm-card { display: block; padding: 16px; border: 1px solid var(--vp-c-divider); border-radius: 8px; text-decoration: none !important; color: inherit !important; }
+.rm-card:hover { border-color: var(--vp-c-brand-1); }
+.rm-card p { margin: 4px 0 0; color: var(--vp-c-text-2); }
