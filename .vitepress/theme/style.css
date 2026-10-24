@@ -2,3 +2,55 @@
 .rm-card { display: block; padding: 16px; border: 1px solid var(--vp-c-divider); border-radius: 8px; text-decoration: none !important; color: inherit !important; }
 .rm-card:hover { border-color: var(--vp-c-brand-1); }
 .rm-card p { margin: 4px 0 0; color: var(--vp-c-text-2); }
+
+:root {
+  --vp-font-family-base: 'Space Grotesk', ui-sans-serif, system-ui, sans-serif;
+  --rm-font-heading: 'Space Mono', ui-monospace, monospace;
+  --vp-c-brand-1: #018a4e;
+  --vp-c-brand-2: #02a55e;
+  --vp-c-brand-3: #018a4e;
+  --vp-c-brand-soft: rgba(1, 138, 78, 0.1);
+  --vp-nav-height: 56px;
+  --vp-sidebar-width: 290px;
+  --vp-sidebar-bg-color: var(--vp-c-bg);
+}
+.dark {
+  --vp-c-brand-1: #3ecf8e;
+  --vp-c-brand-2: #5fd9a2;
+  --vp-c-brand-soft: rgba(62, 207, 142, 0.14);
+}
+
+/* Navbar: garis bawah + tab aktif bergaris hijau */
+.VPNav { border-bottom: 1px solid var(--vp-c-divider); }
+.VPNavBar .divider { display: none; }
+.VPNavBarMenuLink { border-bottom: 2px solid transparent; }
+.VPNavBarMenuLink.active { border-bottom-color: var(--vp-c-brand-1); color: var(--vp-c-text-1); }
+
+/* Sidebar: putih dengan garis kanan, tidak ada latar abu */
+@media (min-width: 960px) {
+  .VPSidebar { border-right: 1px solid var(--vp-c-divider); }
+}
+.VPSidebarItem.level-0 > .item > .text {
+  font-size: 12px; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; color: var(--vp-c-text-2);
+}
+.VPSidebarItem.level-1 > .item > .text,
+.VPSidebarItem.level-2 > .item .text { font-weight: 500; color: var(--vp-c-text-1); }
+.VPSidebarItem.level-1 > .item > .text::before { content: '»'; margin-right: 12px; color: var(--vp-c-text-3); }
+.VPSidebarItem.level-2 > .item .text::before { content: '›'; margin-right: 12px; color: var(--vp-c-text-3); }
+.VPSidebarItem.level-1 > .items { padding-left: 10px; border-left: 0; }
+.VPSidebarItem.level-2 > .item { padding: 0 8px; border-radius: 4px; }
+.VPSidebarItem.level-2.is-active > .item { background: var(--vp-c-brand-soft); }
+.VPSidebarItem.level-2.is-active > .item .text,
+.VPSidebarItem.level-2.is-active > .item .text::before { color: var(--vp-c-brand-1); }
+.VPSidebarItem .indicator { display: none; }
+
+.VPDoc.has-aside .content-container { max-width: 760px; }
+.vp-doc h2, .vp-doc h3 { font-family: var(--rm-font-heading); }
+.vp-doc h2 { border-top: 1px solid var(--vp-c-divider); }
+
+.rm-header { padding-bottom: 24px; margin-bottom: 8px; border-bottom: 1px solid var(--vp-c-divider); }
+.rm-crumb { display: flex; gap: 8px; font-size: 12px; font-weight: 600; text-transform: uppercase; color: var(--vp-c-text-2); }
+.rm-header h1 { margin-top: 8px; font: 700 32px/1.25 var(--rm-font-heading); }
+.rm-excerpt { margin-top: 16px; font-size: 18px; color: var(--vp-c-text-2); }
+
+.vp-doc > div > h2:first-child { border-top: 0; margin-top: 24px; }

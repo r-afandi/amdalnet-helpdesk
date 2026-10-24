@@ -66,6 +66,6 @@ Pada lampiran di riwayat chat, admin dapat:
 - Memilih menu **Unduh**.
 - Memilih menu **Salin link**.
 
-![](https://files.readme.io/bf05338494d70fe6f2bcb618a014b35d9309885784113feb66f6933d52bef4ac-image.png)
+![](/images/bf05338494d70fe6f2bcb618a014b35d9309885784113feb66f6933d52bef4ac-image.png)
 
 Tautan lampiran dapat dibagikan. Perlakukan tautan tersebut sebagai informasi sensitif dan jangan membagikannya kepada pihak yang tidak berwenang.

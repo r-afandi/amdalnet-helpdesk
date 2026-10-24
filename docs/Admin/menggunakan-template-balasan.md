@@ -7,7 +7,7 @@ metadata:
 ---
 ## Menggunakan Template Balasan
 
-![](https://files.readme.io/89547d57844f4f8d83c8a1e9683c13d1e93e861a14626c9816882d617177dc70-Screenshot_2026-10-22_at_16.55.47.png)
+![](/images/89547d57844f4f8d83c8a1e9683c13d1e93e861a14626c9816882d617177dc70-Screenshot_2026-10-22_at_16.55.47.png)
 
 ### 1. Memilih Template dari Menu
 

@@ -1,8 +1,9 @@
 import { h } from 'vue'
+import { useData } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
 import './style.css'
 
-// Pengganti komponen MDX ReadMe (Callout, Cards, Card, Image, Anchor).
+
 const blockClass = { info: 'info', warn: 'warning', error: 'danger', success: 'tip', okay: 'tip' }
 
 const Callout = (props, { slots }) =>
@@ -22,8 +23,23 @@ Image.props = ['src', 'alt', 'align', 'width']
 const Anchor = (props, { slots }) => h('a', { href: props.href, target: props.target, rel: 'noopener' }, slots.default?.())
 Anchor.props = ['href', 'target']
 
+const DocHeader = {
+  setup() {
+    const { frontmatter, site } = useData()
+    return () => {
+      const fm = frontmatter.value
+      return h('header', { class: 'rm-header' }, [
+        fm.section && h('div', { class: 'rm-crumb' }, [h('span', site.value.title), h('span', '›'), h('span', fm.section)]),
+        h('h1', fm.title),
+        fm.excerpt && h('p', { class: 'rm-excerpt' }, fm.excerpt),
+      ])
+    }
+  },
+}
+
 export default {
   extends: DefaultTheme,
+  Layout: () => h(DefaultTheme.Layout, null, { 'doc-before': () => h(DocHeader) }),
   enhanceApp({ app }) {
     Object.entries({ Callout, Cards, Card, Image, Anchor }).forEach(([name, c]) => app.component(name, c))
   },
